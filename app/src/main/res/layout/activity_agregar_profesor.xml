@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitis.AgregarProfesor">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="80dp">
+                <TextView
+
+                    android:text="Agregar Nuevo Profesor"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    >
+
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/text_dummy_hint_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre Profesor"
+                    ></TextView>
+
+
+                <EditText
+                    android:id="@+id/idnombresprefesor"
+                    android:text=""
+                    android:hint="nombre profesor"
+                    android:inputType="textCapSentences"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </EditText>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Apellidos profesor"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:text=""
+                    android:hint="apellido profesor"
+                    android:id="@+id/idapellidoprofesor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Correo profesor"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:hint="correo"
+                    android:id="@+id/idedcorreo"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Telefono"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:hint="telefono"
+                    android:inputType="phone"
+                    android:id="@+id/idteleofono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Direccion"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:hint="telefono"
+                    android:inputType="phone"
+                    android:id="@+id/iddireccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+        <Button
+            android:id="@+id/idbotonregistaprofe"
+            android:text="Registrar"
+            android:layout_width="match_parent"
+            android:background="@color/bgAzul"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content">
+
+        </Button>
+
+    </LinearLayout>
+
+</RelativeLayout>

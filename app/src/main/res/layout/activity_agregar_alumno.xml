@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitis.AgregarAlumno">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="80dp">
+                <TextView
+
+                    android:text="Agregar Nuevo Alumno"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/atma_regular">
+
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/text_dummy_hint_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nombres alumno"
+                    ></TextView>
+
+
+                <EditText
+                    android:id="@+id/idnombresalumno"
+                    android:text=""
+                    android:hint="campo requerido"
+                    android:inputType="textCapSentences"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </EditText>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Apellidos alumno "
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:text=""
+                    android:hint="campo requerido"
+                    android:id="@+id/idapellidosalumno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Edad del Alumno"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:hint="edad alumno"
+                    android:id="@+id/idedadalumno"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Telefono"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:hint="telefono"
+                    android:inputType="phone"
+                    android:id="@+id/idteleofonoapoderado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nombres apoderado 1"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+
+                    android:id="@+id/idnombrepoderado1"
+                    android:hint="nombre apoderado"
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp">
+
+                </EditText>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="right">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¿Agregar 2do apoderado?"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="8dp"/>
+                    <ToggleButton
+                        android:id="@+id/idtoglebutton"
+                        android:layout_width="65dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="right"
+                        android:background="@drawable/togle_option"
+                        android:textOff=""
+                        android:textOn=""/>
+
+                </LinearLayout>
+
+
+
+
+                <EditText
+                    android:id="@+id/idnombreapoderado2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/blue_link"
+                    android:hint="nombre nuevo apoderado"></EditText>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Correo 1"></TextView>
+
+                <EditText
+                    android:text=""
+                    android:hint="correo apoderado 1"
+                    android:id="@+id/idcorreoapoderado1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp">
+
+                </EditText>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="right">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¿Agregar un 2do correo?"
+                        android:layout_marginRight="8dp"
+                        android:layout_gravity="right"/>
+                    <ToggleButton
+                        android:id="@+id/idtoglebutton2"
+                        android:layout_width="65dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="right"
+                        android:background="@drawable/togle_option"
+                        android:textOff=""
+                        android:textOn=""/>
+
+
+                </LinearLayout>
+                <EditText
+                    android:hint="correo apoderado 2"
+                    android:id="@+id/idcorreoapoderado2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/blue_link">
+
+                </EditText>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+        <Button
+            android:id="@+id/idbotonregistraralumno"
+            android:text="Registrar"
+            android:layout_width="match_parent"
+            android:background="@color/bgAzul"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content">
+
+        </Button>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
