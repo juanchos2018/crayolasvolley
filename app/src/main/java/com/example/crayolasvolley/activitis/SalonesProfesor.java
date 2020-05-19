@@ -76,7 +76,6 @@ public class SalonesProfesor extends AppCompatActivity implements Response.Liste
         setContentView(R.layout.activity_salones_profesor);
 
         idprofesor=getIntent().getIntExtra("idprofe",0);
-
         FloatingActionButton fab = findViewById(R.id.fab4);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,33 +84,27 @@ public class SalonesProfesor extends AppCompatActivity implements Response.Liste
             }
         });
 
-        //listaSedes=new ArrayList<>();
         recyclerSalonesprofesor= (RecyclerView) findViewById(R.id.recyclcersolesprofesor);
         recyclerSalonesprofesor.setLayoutManager(new LinearLayoutManager(this));
         cargarWebService();
     }
     Spinner spinner;
     private void dialogoabrir() {
-        //cargarWebService();
-     //   final ArrayList<String> listaSedes1=new ArrayList<>();
+
         final ArrayList<ClsSedes> listaSedes2=new ArrayList<>();
-       // final ClsSedes[] arratsedes = new ClsSedes[100];
         ClsSedes sedes;
         builder1 = new AlertDialog.Builder(SalonesProfesor.this);
         Button btcerrrar,btnagregar;
-
         final RecyclerView recyclerView;
-        //final int idsalon;
+
         final TextView tvidsalon;
         View v = LayoutInflater.from(SalonesProfesor.this).inflate(R.layout.dialogo_salones, null);
-
         recyclerView=(RecyclerView)v.findViewById(R.id.recylcersedes1);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         final String ip=getString(R.string.ip);
         String url=ip+"/listasedes.php";
         RequestQueue queue = Volley.newRequestQueue(SalonesProfesor.this);
-
         jsonObjectRequest=new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
@@ -159,7 +152,6 @@ public class SalonesProfesor extends AppCompatActivity implements Response.Liste
         });
     //    VolleySingleton.getIntanciaVolley(SalonesProfesor.this).addToRequestQueue(jsonObjectRequest);
        queue.add(jsonObjectRequest);
-
         builder1.setView(v);
         btcerrrar=(Button)v.findViewById(R.id.btncerrar);
         tvidsalon=(TextView)v.findViewById(R.id.idsalon);
@@ -172,7 +164,6 @@ public class SalonesProfesor extends AppCompatActivity implements Response.Liste
                 ClsSedes user = adapter2.getItem(position);
                 int idsede=user.getId_sede();
                 String url2=ip+"/buscarsedes.php?id_sede="+idsede;
-
                 RequestQueue queue = Volley.newRequestQueue(SalonesProfesor.this);
                 jsonObjectRequest=new JsonObjectRequest(Request.Method.GET, url2, null, new Response.Listener<JSONObject>() {
                     @Override
@@ -180,8 +171,6 @@ public class SalonesProfesor extends AppCompatActivity implements Response.Liste
                         ClsSalones sedes=null;
                          final ArrayList<ClsSalones> listaSedes3=new ArrayList<>();
                         JSONArray json=response.optJSONArray("sedes");
-
-
                         try {
 
                             for (int i=0;i<json.length();i++){
@@ -223,7 +212,6 @@ public class SalonesProfesor extends AppCompatActivity implements Response.Liste
 
                     }
                 });
-
                queue.add(jsonObjectRequest);
             }
 
@@ -232,8 +220,6 @@ public class SalonesProfesor extends AppCompatActivity implements Response.Liste
 
             }
         });
-
-
         btcerrrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -334,10 +320,9 @@ public class SalonesProfesor extends AppCompatActivity implements Response.Liste
     public void onErrorResponse(VolleyError error) {
         makeText(SalonesProfesor.this, "No se puede conectar "+error.toString(), LENGTH_LONG).show();
         System.out.println();
-        Log.d("ERROR: ", error.toString());
+
         progress.hide();
     }
-
 
     @Override
     public void onResponse(JSONObject response) {

@@ -20,18 +20,35 @@
             android:gravity="center"
             android:orientation="vertical"
             android:layout_height="match_parent">
-            <TextView
-                android:text=""
-                android:textStyle="bold"
-                android:textSize="17sp"
-                android:id="@+id/tv_nombresalon"
+
+            <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-            </TextView>
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/idtolbar2"
+                    app:subtitleTextAppearance="@style/Card.Subtitle"
+                    app:titleTextAppearance="@style/Card.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    >
+                    <TextView
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textSize="17sp"
+                        android:id="@+id/tv_nombresalon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+                </androidx.appcompat.widget.Toolbar>
+            </LinearLayout>
+
             <TextView
                 android:text="correo"
                 android:textSize="17sp"
+                android:layout_marginLeft="10dp"
                 android:id="@+id/tv_correosalon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -40,6 +57,7 @@
             <TextView
                 android:text="sede"
                 android:textSize="17sp"
+                android:layout_marginLeft="10dp"
                 android:id="@+id/tv_sedeosalon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">

@@ -11,9 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activitis.AgregarAlumno"></activity>
-        <activity android:name=".activitis.otralista"></activity>
-        <activity android:name=".activitis.nada" />
+        <activity android:name=".activitis.selecciona">
+
+        </activity>
+        <activity android:name=".activitis.AlumnosSalon" />
+        <activity android:name=".activitis.AgregarAlumno" />
+        <activity android:name=".activitis.otralista" />
+        <activity android:name=".activitis.nada">
+
+        </activity>
         <activity android:name=".activitis.SalonesProfesor" />
         <activity android:name=".activitis.AgregarSalon" />
         <activity android:name=".activitis.AsignarSalon" />

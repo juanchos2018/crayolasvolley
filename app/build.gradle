@@ -39,4 +39,5 @@ dependencies {
 
     implementation 'androidx.cardview:cardview:1.0.0-beta01'
     implementation 'com.loopj.android:android-async-http:1.4.9'
+    implementation 'com.github.ALXKAY:SmoothCheckBox:1.1'
 }

@@ -36,7 +36,7 @@ public class Principal extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.nav_view);
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home,  R.id.nav_sede,R.id.nav_salon,R.id.nav_profesor,R.id.nav_send)
+                R.id.nav_home,  R.id.nav_sede,R.id.nav_salon,R.id.nav_profesor,R.id.nav_alumnos,R.id.nav_send)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

@@ -21,6 +21,10 @@
             android:id="@+id/nav_profesor"
             android:icon="@drawable/ic_menu_camera"
             android:title="Profesores" />
+        <item
+            android:id="@+id/nav_alumnos"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Alumnos" />
 
     </group>
 

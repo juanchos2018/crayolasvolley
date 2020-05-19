@@ -22,14 +22,18 @@
         android:label="Salones"
         tools:layout="@layout/salones_fragment" />
 
+
     <fragment
         android:id="@+id/nav_profesor"
         android:name="com.example.crayolasvolley.ui.profesores.ProfesoresFragment"
         android:label="Profesores"
         tools:layout="@layout/profesores_fragment" />
 
-
-
+    <fragment
+        android:id="@+id/nav_alumnos"
+        android:name="com.example.crayolasvolley.ui.alumnos.AlumnosFragment"
+        android:label="Alumnos"
+        tools:layout="@layout/alumnos_fragment" />
 
 
     <fragment
